@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './Coin.css'
 
-class Coin extends Component{
-    render(){
-        let coin = this.props.Heads? 
-        <img src = "https://tinyurl.com/react-coin-heads-jpg" alt = "Heads"/>
-        :<img src = "https://tinyurl.com/react-coin-tails-jpg" alt = "Tails"/> ;
-        return <div>
-            {coin}
-            <button>Flip Coin!</button>
+class Coin extends Component {
+    render() {
+        return <div className='coin'>
+            {
+                this.props.Heads ?
+                    <img src="../../public/heads.jpg" alt="Heads" />
+                    : <img src="../../public/tails.jpg" alt="Tails" /> 
+            }
         </div>
     }
 }
